@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="100">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10">
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_header" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@+id/toolbar"
+            android:layout_weight="30">
+
+                <include layout="@layout/header_layout" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/padding0dp"
+                android:orientation="vertical"
+                android:layout_weight="20">
+
+            <com.app.securemessaging.util.RobotoMedium
+                android:id="@+id/public_key"
+                style="@style/CustomTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding15dp"
+                android:text="@string/key" />
+
+            <com.app.securemessaging.util.Roboto
+                android:id="@+id/address"
+                style="@style/CustomTextViewMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/public_key"
+                android:padding="@dimen/padding15dp"
+                android:text="@string/keyvalues" />
+
+            </LinearLayout>
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="0dp"
+    android:layout_weight="30"
+    android:layout_margin="@dimen/padding30dp"
+    android:layout_gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/image"
+                android:src="@drawable/qr_code"/>
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="bottom"
+        android:layout_weight="10">
+
+            <com.app.securemessaging.util.RobotoItalic
+                android:id="@+id/send_button"
+                style="@style/bottomLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/proceed"
+                 />
+
+</LinearLayout>
+        </LinearLayout>

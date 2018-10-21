@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#c1a565</color>
+    <color name="colorPrimaryDark">#c1a565</color>
+    <color name="colorAccent">#FF0000</color>
+    <color name="all_text_color">#3c4143</color>
+    <color name="camera_video">#8b8b8b</color>
+    <color name="background_color">#c1a565</color>
+    <color name="golden">#c1a565</color>
+    <color name="tab_color">#f8f8ff</color>
+    <color name="black">#000000</color>
+    <color name="tab_background_selected">#C3A867</color>
+    <color name="tab_background_unselected">#CBB581</color>
+    <color name="layout_background_color">#F3F3F3</color>
+    <color name="button_background_color">#F3F3F3</color>
+
+    <color name="white">#ffffff</color>
+    <color name="white_with_fifty_percent_opacity">#80FFFFFF</color>
+    <color name="grey">#d3d3d3</color>
+    <color name="color_bottom">#9CB14A</color>
+    <color name="red">#FF0000</color>
+
+    <color name="tab_background_color">#C4A867</color>
+    <color name="toolbar_title_color">#ffffff</color>
+    <color name="color_medium">#626668</color>
+    <color name="light_color">#93989A</color>
+    <color name="green">#26CB6F</color>
+    <color name="lightOrangeColor">#ff6A6B</color>
+
+    <color name="button_bg_color">#9b814a</color>
+    <color name="bg_color">#F3F3F3</color>
+    <color name="bg_color_dark">#E3E3E3</color>
+    <color name="fab_bg_color">#ccf6f6f6</color>
+    <color name="transparent">#00000000</color>
+    <color name="main_tab_color">#bfa364</color>
+    <color name="white_color_opacity">#33FFFFFF</color>
+    <color name="grey_dark">#939393</color>
+    <color name="date_color">#717576</color>
+    <color name="recycler_bg_color">#F3F3F3</color>
+
+    <color name="row_background_selected">#30000000</color>
+    <color name="row_background">#ffffff</color>
+
+</resources>

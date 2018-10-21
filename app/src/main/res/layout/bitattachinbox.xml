@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/rl_main">
+
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_header" />
+
+        <com.app.securemessaging.util.RobotoRegular
+            android:id="@+id/time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:layout_marginTop="@dimen/_10dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:padding="@dimen/_10dp"
+            android:text="We had some"
+            android:textColor="@color/date_color"
+            android:textSize="@dimen/size_14" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rl_to">
+
+            <ImageView
+                android:id="@+id/qrcode"
+                android:layout_width="@dimen/padding280dp"
+                android:layout_height="@dimen/padding400dp"
+                android:src="@drawable/qr_code"
+                android:layout_centerHorizontal="true"/>
+
+            <com.app.securemessaging.util.Roboto
+                style="@style/CustomTextViewMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/qrcode"
+                android:layout_alignParentBottom="true"
+                android:padding="@dimen/margin_30"
+                android:gravity="bottom"
+                android:text="@string/linesbitattch_inbox" />
+        </RelativeLayout>
+    </LinearLayout>
+</layout>

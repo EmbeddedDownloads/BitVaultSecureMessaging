@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_header" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/button"
+            android:layout_below="@+id/toolbar"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/padding0dp"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:layout_weight="0.5">
+
+                    <include
+                        android:id="@+id/secure_msg"
+                        layout="@layout/header_layout" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/padding0dp"
+                    android:layout_weight="0.5">
+
+                    <com.app.securemessaging.util.Roboto
+                        android:id="@+id/bitCoinsText"
+                        style="@style/CustomTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/padding30dp"
+                        android:paddingLeft="@dimen/padding15dp"
+                        android:text="@string/bitcoinText"
+                        android:textColor="@color/black" />
+
+                    <com.app.securemessaging.util.RobotoMedium
+                        android:id="@+id/transaction_txt"
+                        style="@style/CustomTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/bitCoinsText"
+                        android:paddingBottom="@dimen/padding20dp"
+                        android:paddingStart="@dimen/padding15dp"
+                        android:text="@string/transactionText"
+                        android:textColor="@color/black" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_transaction"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/transaction_txt"
+                        android:paddingLeft="@dimen/_15dp"
+                        android:paddingRight="@dimen/_15dp">
+
+                        <TextView
+                            android:id="@+id/trans"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/qrcode"
+                            android:text="@string/randomText"
+                            android:textColor="@color/black" />
+
+
+                        <ImageView
+                            android:id="@+id/qrcode"
+                            android:layout_width="@dimen/padding50dp"
+                            android:layout_height="@dimen/padding50dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="@dimen/_10dp" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <com.app.securemessaging.util.RobotoItalic
+                android:id="@+id/send_button"
+                style="@style/bottomLayout"
+                android:layout_width="@dimen/padding0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/ripple_bottom"
+                android:text="@string/done" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

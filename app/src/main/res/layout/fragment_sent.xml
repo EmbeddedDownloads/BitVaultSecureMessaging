@@ -1,0 +1,19 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout xmlns:bind="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F3F3F3"
+        tools:context="com.example.linchpin.bitcoinscreenlayout.view.fragment.InboxFragment">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            bind:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+
+        <include layout="@layout/no_record_found"
+            android:id="@+id/empty_result"/>
+    </RelativeLayout>
+</layout>

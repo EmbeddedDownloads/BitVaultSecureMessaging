@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/rl_main"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_header" />
+
+        <com.app.securemessaging.util.RobotoRegular
+            android:id="@+id/time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:layout_marginTop="@dimen/_10dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:padding="@dimen/_10dp"
+            android:text="We had some"
+            android:textColor="@color/date_color"
+            android:textSize="@dimen/size_14" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/ll_attachment"
+            android:layout_below="@+id/time">
+
+            <com.app.securemessaging.util.RobotoRegular
+                android:id="@+id/message"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/ll_attachment"
+                android:layout_below="@+id/time"
+                android:background="@color/white"
+                android:padding="@dimen/_10dp"
+                android:text="We had some changes done on FreeSWITCH server .Few buggy scenarios seems to be working for now"
+                android:textColor="@color/color_medium"
+                android:textSize="@dimen/size_16" />
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/ll_attachment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/reply"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_attachment"
+                android:layout_width="match_parent"
+                android:padding="@dimen/_10dp"
+                android:layout_height="wrap_content"
+                android:background="@color/recycler_bg_color">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+
+        <com.app.securemessaging.util.RobotoLightItalic
+            android:id="@+id/reply"
+            style="@style/bottomLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple_bottom"
+            android:text="@string/reply_with_msg" />
+    </RelativeLayout>
+</layout>

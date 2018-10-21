@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/parentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_header" />
+
+        <RelativeLayout
+            android:id="@+id/toolbarlay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:orientation="vertical">
+
+            <!--tablayout-->
+            <com.app.securemessaging.util.CustomTabLayout
+                android:id="@+id/tabLayout"
+                style="@style/CustomTab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabIndicatorColor="@color/button_bg_color"
+                app:tabIndicatorHeight="@dimen/size_4sp"
+                app:tabSelectedTextColor="@color/white"
+                app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
+                app:tabTextColor="@color/white_with_fifty_percent_opacity">
+
+
+            </com.app.securemessaging.util.CustomTabLayout>
+
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/tabLayout">
+
+                <FrameLayout
+                    android:id="@+id/container2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"></FrameLayout>
+
+            </android.support.v4.view.ViewPager>
+        </RelativeLayout>
+
+
+        <com.app.securemessaging.util.floatingactionmenu.FloatingActionMenu
+            android:id="@+id/menu_red"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:paddingBottom="@dimen/padding_10dp"
+            android:paddingLeft="@dimen/padding_10dp"
+            android:paddingRight="@dimen/padding_10dp"
+            app:menu_backgroundColor="@color/fab_bg_color"
+            app:menu_colorRipple="@color/colorAccent"
+            app:menu_fab_label="@string/new_secure_message"
+            app:menu_labels_ellipsize="end"
+            app:menu_labels_singleLine="true">
+
+            <com.app.securemessaging.util.floatingactionmenu.FloatingActionButton
+                android:id="@+id/fab_receiveMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/register_key"
+                app:fab_colorNormal="@color/bg_color"
+                app:fab_colorPressed="@color/bg_color"
+                app:fab_colorRipple="@color/bg_color"
+                app:fab_label="@string/receive_Message"
+                app:fab_size="normal" />
+
+            <com.app.securemessaging.util.floatingactionmenu.FloatingActionButton
+                android:id="@+id/fab_bitattachDeviceToken"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/register_key"
+                app:fab_colorNormal="@color/bg_color"
+                app:fab_colorPressed="@color/bg_color"
+                app:fab_colorRipple="@color/bg_color"
+                app:fab_label="@string/bitach_registeration_key"
+                app:fab_size="normal" />
+
+            <com.app.securemessaging.util.floatingactionmenu.FloatingActionButton
+                android:id="@+id/fab_bitattachpc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/create_msg"
+                app:fab_colorNormal="@color/bg_color"
+                app:fab_colorPressed="@color/bg_color"
+                app:fab_colorRipple="@color/bg_color"
+                app:fab_label="@string/send_attachments_to_Bitach"
+                app:fab_size="normal" />
+
+            <com.app.securemessaging.util.floatingactionmenu.FloatingActionButton
+                android:id="@+id/fab_bitattach"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/bitatt"
+                app:fab_colorNormal="@color/bg_color"
+                app:fab_colorPressed="@color/bg_color"
+                app:fab_colorRipple="@color/bg_color"
+                app:fab_label="@string/send_attachments_from_Bitach"
+                app:fab_size="normal" />
+
+
+        </com.app.securemessaging.util.floatingactionmenu.FloatingActionMenu>
+
+    </RelativeLayout>
+</layout>

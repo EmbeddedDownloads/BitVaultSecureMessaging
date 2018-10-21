@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/parentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_header" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:weightSum="1"
+            tools:context="com.example.linchpin.selectwallet.MainActivity">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/padding0dp"
+                android:layout_weight="0.45">
+
+                <include layout="@layout/header_layout"
+                    android:id="@+id/toolbar_header"
+                    />
+
+                <com.app.securemessaging.util.Roboto
+                    android:id="@+id/txt_secure_msg"
+                    style="@style/CustomTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center|bottom"
+                    android:gravity="center"
+                    android:layout_below="@+id/toolbar_header"
+                    android:textSize="@dimen/size_16"
+                    android:layout_alignParentBottom="true"
+                    android:text="@string/select_to_send_msg"
+                    android:textColor="@color/all_text_color" />
+
+
+            </RelativeLayout>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvContacts"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/padding0dp"
+                android:layout_gravity="center"
+                android:layout_weight="0.55" />
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>

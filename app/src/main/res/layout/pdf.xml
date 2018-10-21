@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.app.securemessaging.bean.SelectFilesBean" />
+
+        <variable
+            name="selectFilesBean"
+            type="SelectFilesBean" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/parentRelativeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_color"
+            android:padding="@dimen/padding_10dp">
+
+            <ImageView
+                android:id="@+id/logoImageView"
+                android:layout_width="@dimen/padding50dp"
+                android:layout_height="@dimen/padding50dp"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/file" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/padding_15dp"
+                android:layout_toLeftOf="@+id/selectFile"
+                android:layout_toRightOf="@+id/logoImageView">
+
+                <com.app.securemessaging.util.RobotoLight
+                    android:id="@+id/media_file_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{selectFilesBean.name}"
+                    android:textColor="@color/all_text_color"
+                    android:textSize="@dimen/size_18" />
+
+
+                <com.app.securemessaging.util.RobotoLight
+                    android:id="@+id/media_file_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/media_file_name"
+                    android:text="@{selectFilesBean.size}"
+                    android:textColor="@color/all_text_color"
+                    android:textSize="@dimen/size_18" />
+            </RelativeLayout>
+
+            <com.app.securemessaging.util.BitVaultFont
+                android:id="@+id/selectFile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="@string/k"
+                android:textColor="@color/background_color"
+                android:textSize="@dimen/size_25sp"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_below="@+id/parentRelativeLayout"
+            android:background="@color/background_color" />
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,269 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="createmessage"
+            type="com.app.securemessaging.bean.CreateMessageBean">
+
+        </variable>
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/parentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_header" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/attachment"
+            android:layout_below="@+id/toolbar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/_10dp"
+                    android:paddingStart="@dimen/_10dp"
+                    android:paddingTop="@dimen/_10dp">
+
+                    <com.app.securemessaging.util.Roboto
+                        android:id="@+id/message_to"
+                        style="@style/CustomTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:paddingStart="@dimen/_10dp"
+                        android:text="@string/to" />
+
+                    <com.app.securemessaging.util.RobotoLightItalicAutoCompleteText
+                        android:id="@+id/receiver_address"
+                        style="@style/CustomTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/padding_10dp"
+                        android:layout_toLeftOf="@+id/saveContact"
+                        android:layout_toRightOf="@+id/message_to"
+                        android:background="@drawable/edittext_border"
+                        android:completionThreshold="1"
+                        android:maxLines="2"
+                        android:textColor="@color/all_text_color" />
+                    <com.app.securemessaging.util.BitContactFont
+                        android:id="@+id/saveContact"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/qr_scanner"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="@dimen/_10dp"
+                        android:paddingRight="@dimen/_10dp"
+                        android:text="b"
+                        android:visibility="gone"
+                        android:textColor="@color/main_tab_color"
+                        android:textSize="@dimen/padding30dp"></com.app.securemessaging.util.BitContactFont>
+
+
+                    <com.app.securemessaging.util.BitMessenger
+                        android:id="@+id/qr_scanner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="@dimen/_10dp"
+                        android:paddingRight="@dimen/_10dp"
+                        android:text="j"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/padding30dp"></com.app.securemessaging.util.BitMessenger>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/image_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@color/bg_color"
+                    android:gravity="center_vertical">
+
+                    <LinearLayout
+                        android:id="@+id/attachments"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_toLeftOf="@+id/attach"
+                        android:background="@color/bg_color_dark"
+                        android:gravity="center"
+                        android:visibility="gone"
+                        android:weightSum="3">
+
+                        <com.app.securemessaging.util.BitVaultFont
+                            android:id="@+id/camera"
+                            style="@style/CustomTextView"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="@dimen/_10dp"
+                            android:paddingLeft="@dimen/padding20dp"
+                            android:paddingRight="@dimen/padding20dp"
+                            android:text="@string/b"
+                            android:textColor="@color/camera_video" />
+
+
+                        <com.app.securemessaging.util.BitVaultFont
+                            android:id="@+id/gallery"
+                            style="@style/CustomTextView"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@id/camera"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="@dimen/_10dp"
+                            android:paddingLeft="@dimen/padding20dp"
+                            android:paddingRight="@dimen/padding20dp"
+                            android:text="@string/c"
+                            android:textColor="@color/camera_video" />
+
+
+                        <com.app.securemessaging.util.BitVaultFont
+                            android:id="@+id/recorder"
+                            style="@style/CustomTextView"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@id/gallery"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="@dimen/_10dp"
+                            android:paddingLeft="@dimen/padding20dp"
+                            android:paddingRight="@dimen/padding20dp"
+                            android:text="@string/d"
+                            android:textColor="@color/camera_video" />
+
+                    </LinearLayout>
+
+
+                    <com.app.securemessaging.util.BitVaultFont
+                        android:id="@+id/attach"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@color/bg_color"
+                        android:gravity="center"
+                        android:padding="@dimen/_10dp"
+                        android:text="@string/a"
+                        android:textColor="@color/background_color"
+                        android:textSize="@dimen/size_25sp"></com.app.securemessaging.util.BitVaultFont>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <RelativeLayout
+                        android:id="@+id/messageLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.app.securemessaging.util.RobotoLightItalicEdittext
+                            android:id="@+id/edit_message"
+                            style="@style/CustomTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_toLeftOf="@+id/charCountTv"
+                            android:background="@drawable/edittext_border"
+                            android:gravity="top"
+                            android:hint="@string/message"
+                            android:inputType="textMultiLine"
+                            android:overScrollMode="always"
+                            android:padding="@dimen/padding15dp"
+                            android:scrollbarStyle="insideInset"
+                            android:scrollbars="vertical"
+                            android:singleLine="false"
+                            android:textColor="@color/all_text_color" />
+
+                        <com.app.securemessaging.util.Roboto
+                            android:id="@+id/charCountTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerVertical="true"
+                            android:paddingRight="@dimen/_15dp"
+                            android:paddingTop="@dimen/_15dp"
+                            android:text="@string/char_limit"
+                            android:textColor="@color/all_text_color" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/attachment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layoutDirection="rtl"
+            android:scrollbars="horizontal">
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/bg_color"></View>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/showImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true">
+
+            </android.support.v7.widget.RecyclerView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/progress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center">
+
+
+            <ProgressBar
+                android:id="@+id/circle_progress_bar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:indeterminate="false"
+                android:visibility="gone"
+                android:indeterminateDrawable="@drawable/circularforground"
+                android:max="1000"
+                android:rotation="-90" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</layout>

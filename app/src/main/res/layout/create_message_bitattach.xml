@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:id="@+id/parentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_header" />
+
+        <RelativeLayout
+            android:id="@+id/rl_to"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:padding="@dimen/_10dp">
+
+            <com.app.securemessaging.util.Roboto
+                android:id="@+id/message_to"
+                style="@style/CustomTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="@string/to" />
+
+            <com.app.securemessaging.util.RobotoLightItalicAutoCompleteText
+                android:id="@+id/receiver_address"
+                style="@style/CustomTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/padding_10dp"
+                android:layout_toLeftOf="@+id/saveContact"
+                android:layout_toRightOf="@+id/message_to"
+                android:background="@drawable/edittext_border"
+                android:hint="@string/to_hint"
+                android:maxLines="2"
+                android:completionThreshold="1"
+                android:textColor="@color/all_text_color" />
+
+            <com.app.securemessaging.util.BitContactFont
+                android:id="@+id/saveContact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/qr_scanner"
+                android:layout_centerVertical="true"
+                android:paddingLeft="@dimen/_10dp"
+                android:paddingRight="@dimen/_10dp"
+                android:text="b"
+                android:visibility="gone"
+                android:textColor="@color/main_tab_color"
+                android:textSize="@dimen/padding30dp"></com.app.securemessaging.util.BitContactFont>
+
+            <com.app.securemessaging.util.BitMessenger
+                android:id="@+id/qr_scanner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="j"
+                android:textColor="@color/black"
+                android:textSize="@dimen/padding30dp"></com.app.securemessaging.util.BitMessenger>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <com.app.securemessaging.util.Roboto
+                style="@style/CustomTextViewMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/label"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/_10dp"
+                android:text="@string/label_bitatch_msg" />
+
+
+            <com.app.securemessaging.util.RobotoItalic
+                android:id="@+id/scan_button"
+                style="@style/bottomLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/label"
+                android:background="@drawable/ripple_bottom"
+                android:text="@string/scan_btn" />
+
+
+        </LinearLayout>
+
+     <!--   <com.app.securemessaging.util.RobotoLightItalic
+            android:id="@+id/scan_send"
+            style="@style/bottomLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:background="@drawable/ripple_bottom"
+            android:text="@string/scanandsend" />-->
+
+        <RelativeLayout
+            android:id="@+id/progress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center">
+
+            <com.app.securemessaging.util.Roboto
+                style="@style/CustomTextViewMedium"
+                android:id="@+id/bitach_SessionKey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_10dp"
+                android:layout_centerInParent="true" />
+            <ProgressBar
+                android:id="@+id/circle_progress_bar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:indeterminate="false"
+                android:visibility="gone"
+                android:indeterminateDrawable="@drawable/circularforground"
+                android:max="1000"
+                android:rotation="-90" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

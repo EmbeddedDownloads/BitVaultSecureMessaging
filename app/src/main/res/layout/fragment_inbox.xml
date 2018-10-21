@@ -1,0 +1,81 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout xmlns:bind="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/rl_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_color"
+        tools:context="com.example.linchpin.bitcoinscreenlayout.view.fragment.InboxFragment">
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_color"
+            android:paddingBottom="@dimen/_10dp"
+            android:paddingLeft="@dimen/_15dp"
+            android:paddingRight="@dimen/_10dp"
+            android:paddingTop="@dimen/_10dp"
+            android:text="@string/older_messages"
+            android:visibility="gone" />
+
+        <android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/swipeContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <!-- <android.support.v7.widget.RecyclerView
+                 android:id="@+id/recyclerView"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:layout_below="@+id/text"
+                 bind:layoutManager="android.support.v7.widget.LinearLayoutManager" />-->
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ScrollView
+                    android:id="@+id/scroll_above"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+
+                </ScrollView>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/text"
+                    bind:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+
+                <ScrollView
+                    android:id="@+id/scroll_below"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+
+                </ScrollView>
+
+            </FrameLayout>
+
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <include
+            android:id="@+id/empty_result"
+            layout="@layout/no_record_found" />
+
+    </RelativeLayout>
+</layout>

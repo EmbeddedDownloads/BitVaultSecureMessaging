@@ -1,0 +1,11 @@
+<com.app.securemessaging.util.RobotoItalic xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="left"
+    android:lines="1"
+    style="@style/SpinnerStyle"
+    android:padding="@dimen/padding5dp"
+    android:text="test"
+    android:textColor="@color/all_text_color"
+    android:textSize="16sp" />

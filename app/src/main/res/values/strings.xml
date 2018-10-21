@@ -1,0 +1,177 @@
+<resources>
+    <string name="app_name">Secure Messaging</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <!-- Jyotsna -->
+
+    <string name="secure_messaging">Secure Messaging</string>
+    <string name="character">c</string>
+    <string name="new_messages">2 New Messages</string>
+    <string name="wallet">Primary Wallet</string>
+    <string name="character2">g</string>
+    <string name="delete">l</string>
+    <string name="app_name1">Wallet 2 Information</string>
+    <string name="white">#ffffff</string>
+    <string name="wallet2">Wallet 2 Information</string>
+    <string name="secure">Secure Messaging</string>
+    <string name="publicSecure">Secure Messaging</string>
+    <string name="key">Public Key</string>
+    <string name="keyvalues">jkdf4jk4jk4j4mJHNr3e3e3</string>
+    <string name="values">Do you want to proceed the transaction with this wallet ?</string>
+    <string name="next">Next</string>
+    <string name="create_message">Create Message</string>
+    <string name="attach_files">Attach Files</string>
+    <string name="to">To:</string>
+    <string name="send">Send</string>
+    <string name="message">Type your message here</string>
+    <string name="sending_message">Sending</string>
+    <string name="SecureMessageSending">Secure Message Sending</string>
+    <string name="sendingfailed">Sending Failed</string>
+    <string name="MessageSendingFailed">Error: Message Sending Failed</string>
+    <string name="retry">Retry</string>
+    <string name="cancel">Cancel</string>
+    <string name="sending_message_successfully">Message Sending Successfully</string>
+    <string name="status">Status</string>
+    <string name="bitcoinText"> deducted from your</string>
+    <string name="transactionText">Transaction ID:</string>
+    <string name="randomText">addsd344hfhsfdsfnj34n5jk45jr4j4j4r4k4nvef4jfejkdsfkjsdnfjeufodfdfddfnvfjvjvvv</string>
+    <string name="size_text">180/1</string>
+    <string name="proceed">Proceed</string>
+    <string name="c">c</string>
+    <string name="message_fee">Message Fee</string>
+    <string name="dummy_fee">0.0 BTC</string>
+    <string name="dummy_fee_eot">0.0 EOT</string>
+    <string name="select_wallet">Select Wallet</string>
+    <string name="select_wallet_type">Select Wallet Type</string>
+    <string name="information">Information</string>
+    <string name="sending">Sending</string>
+    <string name="sending_fail">Sending Failed</string>
+    <string name="secure_msg_sending">Secure Message Sending</string>
+    <string name="error_mesg_failed">Error : Message Sending Failed</string>
+    <string name="msg_successful">Message Sent Successfully</string>
+    <string name="ok">Ok</string>
+    <string name="confirmation_msg">Do you want to save this message ?</string>
+    <string name="char_limit">180/1</string>
+    <string name="inbox">Inbox</string>
+    <string name="sent">Sent</string>
+    <string name="reply_with_msg">Reply with Secure Messaging</string>
+    <string name="h">h</string>
+    <string name="to_hint">To</string>
+    <string name="older_messages">Older Messages</string>
+    <string name="new_bitmatch">New messages with bitmatch</string>
+    <string name="name">Sanse Stark</string>
+    <string name="lines">Click and Scan Qr code with bitvault application to encrypt message.</string>
+    <string name="linesB2ACase">Click on below Qr code to scan SessionKey</string>
+    <string name="scanandsend">Scan and Send</string>
+    <string name="message_size">Message Size</string>
+    <string name="size">0.23 MB</string>
+    <string name="message_charge">Message Charge</string>
+    <string name="send_file">Send files to PC</string>
+    <string name="new_message_with_bitattach">New Message with Bitach</string>
+    <string name="transactionId">Transaction Id</string>
+    <string name="permission_not_granted">Permission not granted. Please grant permission to use this feature</string>
+    <string name="create_message_with_bitattach">Create Message with Bitach</string>
+    <string name="k">k</string>
+    <string name="select_files">Select Files</string>
+    <string name="send_to_pc">Send to PC</string>
+    <string name="write_message">Storage permission not granted. Please grant permission by pressing OK</string>
+    <string name="camera">Camera permission not granted. Please grant permission by pressing OK</string>
+    <string name="recorder">Microphone permission not granted. Please grant permission by pressing OK</string>
+    <string name="voice_recorder">Voice Recorder Application not available in device</string>
+    <string name="a">a</string>
+    <string name="b">b</string>
+    <string name="d">d</string>
+    <string name="new_message">New Message</string>
+    <string name="receiver_addresss_not_empty">Receiver address must not be empty</string>
+    <string name="receiver_addresss_invalid">Invalid receiver address.Please check </string>
+    <string name="internet_connection">Please check your internet connection.</string>
+    <string name="zero_kb">0.00 KB</string>
+    <string name="message_should_not_be_empty">Please either write some message or attach files to send</string>
+    <string name="attchfile_not_be_empty">Please attach files to send</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="file_sent">File Sent Successfully</string>
+    <string name="no_message_found">No message found in inbox</string>
+    <string name="no_record_found">No messages</string>
+    <!--<string name="no_record_found">No record found</string>-->
+    <string name="priority">Priority</string>
+    <string name="high">High</string>
+    <string name="mid">Mid</string>
+    <string name="low">Low</string>
+    <string name="wallet_">Wallet</string>
+    <string name="select_to_send_msg">Select wallet to send secure message</string>
+    <string name="select_to_send_msgType">Select wallet Type to send secure message</string>
+    <string name="want_to_pay_with">You want to pay with ?</string>
+    <string name="m">m</string>
+    <string name="draft">Draft</string>
+    <string name="fail">Failed</string>
+    <string name="service_description">Servcie is used to poll pbc to receive message.</string>
+    <string name="no_enough_balance">Enough balance not available in the wallet.</string>
+    <string name="message_fee_cannot_be_zero">Please wait we are calculating message fees</string>
+    <string name="insufficient_balance">Insufficient balance</string>
+    <string name="n">n</string>
+    <string name="new_secure_message">New Secure Message</string>
+    <string name="version">Version -</string>
+    <string name="toast_crash">App crashes, please send mail to report.</string>
+    <string name="media_deleted">Media not available</string>
+    <string name="image">Image</string>
+    <string name="video">Video</string>
+    <string name="attachment_not_greater_5mb">Attachment shoud not be greater then 25 MB.</string>
+    <string name="txid">Transaction ID</string>
+    <string name="unable_to_del">Unable to delete, please try again</string>
+    <string name="delete_msg">Are you sure you want to delete message ?</string>
+    <string name="app_key_value">mcx5qmyv5gdkobveigdpk</string>
+    <string name="app_key">app_key</string>
+    <string name="webserver_key_value">44zyfcvekplf6p7ekvjeqo</string>
+
+    <string name="confirmDialog">"Confirm Delete"</string>
+    <string name="confirmDialogSave">"Confirm Save"</string>
+    <string name="no_receiver_addresss">Selected contact does not contain receiver address.</string>
+    <string name="sessionkey_should_not_be_empty">Session key should not be empty.</string>
+
+    <string name="key_successful">Session Key Sent Successfully</string>
+    <string name="linesbitattch_inbox">Scan Qr code with bitvault application to decrypt message.</string>
+
+    <string name="linesbitattch_token">Scan Qr code from bitvault application to get Registration key for Registration.</string>
+
+    <string name="send_attachments_from_Bitach">Send Attachments from Bitach</string>
+    <string name="send_attachments_to_Bitach">Send Attachments to Bitach</string>
+    <string name="bitach_registeration_key">Bitach Registration key</string>
+    <string name="device_token_title">Registration Key</string>
+
+    <string name="label_bitatch_msg"> Click here to scan the QR code from Bitach.</string>
+
+    <string name="scan_btn">Scan</string>
+
+    <string name="scan_success_msg">Bitach details received successfully</string>
+
+    <string name="scan_fail_msg">Incorrect Bitach details</string>
+
+    <string name="wrong_token">Error in fetching device token</string>
+    <string name="session_key">Session Key:-</string>
+    <string name="B2Asession_key">Session Key</string>
+
+    <string name="bitattachSize">Bitach size should not be less than 0 bytes</string>
+    <string name="a2a_inbox_hint">XXX</string>
+    <string name="b2a_receverAddComp">Sender and receiver wallet should not be same.Please select another Wallet</string>
+
+    <string name="sent_success">Sent successfully </string>
+    <string name="sending_failed">Sending failed</string>
+    <string name="wallet_bitcoin">Bitcoin</string>
+    <string name="wallet_eot">EOT</string>
+    <string name="btc">BTC</string>
+    <string name="wallet_eotWallet">EOT Wallet</string>
+    <string name="BitcoinWallet">Bitcoin Wallet</string>
+    <string name="EotBalNotUpdated">Eot Wallet balance not updated</string>
+    <string name="receive_Message">Receive Message</string>
+    <string name="walletFetchIssue">Problem in fetching Wallets</string>
+    <string name="wallet_eotS">Wallet EOT</string>
+    <string name="selectReceiverAdd">Select Wallet</string>
+    <string name="selectedReceiverAdd">Scan or copy selected wallet address</string>
+    <string name="WalletAdd">Wallet Address</string>
+    <string name="receiver_addresss_type">Receiver and sender address should be of same wallet type </string>
+
+</resources>

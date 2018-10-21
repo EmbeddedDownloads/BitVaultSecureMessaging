@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/rl_main">
+
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_header" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rl_to">
+
+            <ImageView
+                android:id="@+id/qrcode"
+                android:layout_width="@dimen/padding280dp"
+                android:layout_height="@dimen/padding400dp"
+                android:layout_centerInParent="true"/>
+
+            <com.app.securemessaging.util.Roboto
+                android:id="@+id/txt_NoDeviceToken"
+                style="@style/CustomTextViewMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:padding="@dimen/margin_30"/>
+
+            <com.app.securemessaging.util.RobotoItalic
+                android:id="@+id/retry_button"
+                style="@style/bottomLayout"
+                android:layout_below="@+id/txt_NoDeviceToken"
+                android:layout_width="@dimen/padding80dp"
+                android:layout_height="@dimen/padding40dp"
+                android:background="@drawable/ripple_bottom"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="false"
+                android:padding="@dimen/margin_5dp"
+                android:text="@string/retry" />
+
+            <com.app.securemessaging.util.Roboto
+                android:id="@+id/buttom_txt"
+                style="@style/CustomTextViewMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:padding="@dimen/margin_30"
+                android:gravity="bottom"
+                android:text="@string/linesbitattch_token" />
+        </RelativeLayout>
+    </LinearLayout>
+</layout>

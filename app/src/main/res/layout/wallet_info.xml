@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:id="@+id/parentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_header" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/button"
+            android:layout_below="@+id/toolbar"
+            android:orientation="vertical"
+            android:weightSum="0.8">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/padding0dp"
+                android:layout_weight="0.4">
+
+                <include layout="@layout/header_layout" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/padding0dp"
+                android:layout_weight="0.4">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fillViewport="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="@dimen/_10dp"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:orientation="vertical"
+                        android:weightSum="3">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:paddingStart="@dimen/padding15dp"
+                            android:visibility="gone">
+
+                            <com.app.securemessaging.util.RobotoMedium
+                                android:id="@+id/priority_key"
+                                style="@style/CustomTextView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/priority" />
+
+                            <RadioGroup
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="3">
+
+                                <RadioButton
+                                    android:id="@+id/high"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/high"
+                                    android:textColor="@color/all_text_color" />
+
+                                <RadioButton
+                                    android:id="@+id/mid"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/mid"
+                                    android:textColor="@color/all_text_color" />
+
+                                <RadioButton
+                                    android:id="@+id/low"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/low"
+                                    android:textColor="@color/all_text_color" />
+
+                            </RadioGroup>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.app.securemessaging.util.RobotoMedium
+                                android:id="@+id/wallet_key"
+                                style="@style/CustomTextView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="@dimen/padding15dp"
+                                android:text="@string/wallet_" />
+
+                            <android.support.v7.widget.AppCompatSpinner
+                                android:id="@+id/sendSpinner"
+                                style="@style/SpinnerStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:paddingEnd="@dimen/padding_10dp"
+                                android:paddingStart="@dimen/padding_10dp"
+                                android:spinnerMode="dropdown"
+                                android:textColor="@color/all_text_color"
+                                android:visibility="visible" />
+
+                            <com.app.securemessaging.util.Roboto
+                                android:id="@+id/walletEot"
+                                style="@style/CustomTextViewMedium"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingEnd="@dimen/padding_10dp"
+                                android:textColor="@color/all_text_color"
+                                android:paddingStart="@dimen/padding15dp"
+                                android:visibility="gone" />
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.app.securemessaging.util.RobotoMedium
+                                android:id="@+id/public_key"
+                                style="@style/CustomTextView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="@dimen/padding15dp"
+                                android:text="@string/message_size" />
+
+                            <com.app.securemessaging.util.Roboto
+                                android:id="@+id/size"
+                                style="@style/CustomTextViewMedium"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/public_key"
+                                android:paddingStart="@dimen/padding15dp"
+                                android:paddingTop="@dimen/padding5dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+
+                            <com.app.securemessaging.util.RobotoMedium
+                                android:id="@+id/message_fee"
+                                style="@style/CustomTextView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/size"
+                                android:paddingStart="@dimen/padding15dp"
+                                android:text="@string/message_charge" />
+
+                            <com.app.securemessaging.util.Roboto
+                                android:id="@+id/transaction_fee"
+                                style="@style/CustomTextViewMedium"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/message_fee"
+                                android:paddingStart="@dimen/padding15dp"
+                                android:paddingTop="@dimen/padding5dp"
+                                android:text="@string/dummy_fee" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </ScrollView>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <com.app.securemessaging.util.RobotoItalic
+                android:id="@+id/send_button"
+                style="@style/bottomLayout"
+                android:layout_width="@dimen/padding0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/ripple_bottom"
+                android:text="@string/send" />
+
+            <com.app.securemessaging.util.RobotoItalic
+                android:id="@+id/cancel"
+                style="@style/bottomLayout"
+                android:layout_width="@dimen/padding0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/ripple_grey"
+                android:text="@string/cancel"
+                android:textColor="@color/all_text_color" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

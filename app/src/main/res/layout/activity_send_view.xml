@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.bitcoininboxscreen.view.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/aparent_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background_color"
+            android:orientation="vertical"
+            android:weightSum="100">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/toolbar_title_color"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/image_padding"
+                    android:src="@drawable/common_image" />
+
+                <TextView
+                    style="@style/CustomTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Jon Snow" />
+            </LinearLayout>
+
+
+            <TextView
+                style="@style/CustomTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/toolbar_title_color"
+                android:paddingLeft="@dimen/image_padding"
+                android:text="We're digging trenches all along our flenks.They won't be able to hit us the way Stannis hits you,in a double envelopment.I,ll never let him touch you again.I'll protect you,I promise" />
+
+
+            <TextView
+                style="@style/CustomTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15dp"
+                android:paddingLeft="@dimen/image_padding"
+                android:text="Public Key of Receiver" />
+
+
+            <TextView
+                style="@style/CustomTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15dp"
+                android:paddingLeft="@dimen/image_padding"
+                android:text="jkdf4jk4jk4j4rnJHNr3e3e3" />
+
+
+            <TextView
+                style="@style/CustomTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15dp"
+                android:paddingLeft="@dimen/image_padding"
+                android:text="Transaction ID" />
+
+
+            <TextView
+                style="@style/CustomTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15dp"
+                android:paddingLeft="@dimen/image_padding"
+                android:text="addsd34ghsdfgfgfhjfhjhfhgdjfsdfhfhskjdhfjhsdjfhfhjhfjhfhjkfhhfhfhsfkdjfhjkdfhjkshdfkjfhjhfjkshfjk" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</layout>
